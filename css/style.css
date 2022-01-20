@@ -58,18 +58,20 @@ body{
 .language{
     position: relative;
     cursor: pointer;
+    padding-bottom: 10px;
 }
 
 .options{
     position: absolute;
     top: 130%;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 150%;
-    color: #d1d1d7;
     opacity: 0;
     z-index: -11;
     transition: all 0.5s ease;
+    list-style: none;
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 10px;
+    min-width: 80px;
 }
 
 .language:hover .options{
@@ -82,7 +84,19 @@ body{
     cursor: pointer;
 }
 
-.option:hover{
+.option:not(:last-child){
+    margin-bottom: 5px;
+}
+
+.option a{
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 150%;
+    color: #000;
+}
+
+.option:hover a{
     color: #999999;
 }
 
@@ -92,6 +106,7 @@ body{
     line-height: 150%;
     color: #d1d1d7;
     margin-right: 4px;
+    padding: 0 0 0 10px;
 }
 
 .bx-globe{
@@ -121,6 +136,7 @@ body{
 .btn:hover{
     background-color: transparent;
     outline: 2px solid #f5443b;
+    color: #f5443b;
 }
 
 /* header end */
@@ -316,7 +332,7 @@ input[type='text']:focus{
     border: 1px solid rgba(154, 156, 203, 0.6);
     border-radius: 8px;
     padding: 8px 18px;
-    margin-right: 18px;
+    margin-right: 12px;
     margin-bottom: 24px;
     text-decoration: none;
 }
@@ -464,7 +480,7 @@ input[type='text']:focus{
 .learn-btn .btn{
     border: none;
     display: block;
-    width: 155px;
+    width: 165px;
     margin-right: auto;
     margin-left: auto;
     cursor: pointer;
@@ -482,7 +498,7 @@ input[type='text']:focus{
 }
 
 .learn-item:not(:first-child):hover{
-    height: 485px;
+    height: 490px;
 }
 
 .learn-item:not(:first-child):hover .learn-btn{
@@ -498,11 +514,12 @@ input[type='text']:focus{
     background-color: transparent;
     border: 1px solid #f5443b;
     border-radius: 6px;
-    width: 198px;
+    width: 200px;
     margin-right: auto;
     margin-left: auto;
     display: block;
     cursor: pointer;
+    transition: all 0.5s ease;
 }
 
 .show:hover{
@@ -693,7 +710,7 @@ input[type='text']:focus{
     border: 1px solid #f5443b;
     border-radius: 6px;
     padding: 16px 75px;
-    width: 300px;
+    width: 310px;
     margin-left: auto;
     margin-right: auto;
     display: block;
@@ -738,12 +755,42 @@ input[type='text']:focus{
     border: 1px solid #f5443b;
 }
 
+.price-item:nth-child(3){
+    overflow: hidden;
+}
+
 .popular{
     position: absolute;
     top: 0;
     right: 0;
 }
 
+.top-img{
+    position: absolute;
+    top: 0;
+    right: 40px;
+    z-index: 8;
+}
+
+.right-img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 8;
+}
+
+.red-text{
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform-origin: 0 0;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 150%;
+    color: rgba(255, 255, 255, 0.8);
+    transform: rotate(32.64deg);
+    z-index: 34;
+}
 /* price end */
 /* app start */
 
@@ -767,6 +814,10 @@ input[type='text']:focus{
     line-height: 180%;
     color: rgba(255, 255, 255, 0.7);
     margin-bottom: 32px;
+}
+
+.download-list{
+    list-style: none;
 }
 
 .download-item:first-child{
